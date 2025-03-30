@@ -1,0 +1,355 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About NAPO - Your Premier Book Store</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        /* Hero Section Styles */
+        .hero-section {
+            background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1535905557558-afc4877a26fc?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8YWJvdXQlMjB1cyUyMGJvb2slMjBzdG9yZXxlbnwwfHwwfHx8MA%3D%3D');
+            background-size: cover;
+            background-position: center;
+            height: 150px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+        }
+
+        .hero-content h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+        }
+
+        /* Main Content Styles */
+        .main-content {
+            max-width: 1200px;
+            margin: 50px auto;
+            padding: 0 20px;
+        }
+
+            .main-content h2 {
+                margin-bottom: 20px;
+                color: #333;
+            }
+
+            .main-content p {
+                line-height: 1.6;
+                color: #666;
+                margin-bottom: 30px;
+            }
+
+        /* About Grid Styles */
+        .about-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .about-card {
+            background: #f9f9f9;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+            .about-card:hover {
+                transform: translateY(-5px);
+            }
+
+            .about-card img {
+                width: 100%;
+                height: 200px;
+                object-fit: cover;
+                border-radius: 5px;
+                margin-bottom: 20px;
+            }
+
+            .about-card h3 {
+                color: #333;
+                margin-bottom: 15px;
+            }
+
+        /* Team Section Styles */
+        .team-section {
+            background: #f5f5f5;
+            padding: 60px 0;
+        }
+
+        .team-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+            .team-container h2 {
+                margin-bottom: 20px;
+                color: #333;
+            }
+
+            .team-container > p {
+                color: #666;
+                margin-bottom: 40px;
+            }
+
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            padding: 40px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .team-member {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+            .team-member:hover {
+                transform: translateY(-5px);
+            }
+
+            .team-member img {
+                width: 100%;
+                height: 300px;
+                object-fit: cover;
+            }
+
+        .team-info {
+            padding: 20px;
+            text-align: center;
+        }
+
+            .team-info h3 {
+                color: #333;
+                margin-bottom: 5px;
+            }
+
+            .team-info .position {
+                color: #007bff;
+                font-weight: 600;
+                margin-bottom: 10px;
+            }
+
+            .team-info p {
+                color: #666;
+                font-size: 0.9rem;
+                line-height: 1.6;
+            }
+
+        /* Social Links Styles */
+        .social-links {
+            margin-top: 15px;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+
+            .social-links a {
+                color: #2c1810;
+                font-size: 1.5rem;
+                text-decoration: none;
+                transition: all 0.3s ease;
+                width: 40px;
+                height: 40px;
+                border-radius: 50%;
+                background: #f4e4bc;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border: 2px solid #2c1810;
+            }
+
+                .social-links a:hover {
+                    transform: translateY(-3px);
+                    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+                }
+
+                .social-links a.linkedin:hover {
+                    background: #0077b5;
+                    color: white;
+                    border-color: #0077b5;
+                }
+
+                .social-links a.twitter:hover {
+                    background: #1DA1F2;
+                    color: white;
+                    border-color: #1DA1F2;
+                }
+
+                .social-links a.instagram:hover {
+                    background: #E4405F;
+                    color: white;
+                    border-color: #E4405F;
+                }
+
+                .social-links a i {
+                    transition: transform 0.3s ease;
+                }
+
+                .social-links a:hover i {
+                    transform: scale(1.2);
+                }
+
+        /* Contact Section Styles */
+        .contact-section {
+            background: #333;
+            color: white;
+            padding: 60px 0;
+            text-align: center;
+        }
+
+        .contact-info {
+            margin-top: 30px;
+        }
+
+            .contact-info h2 {
+                margin-bottom: 20px;
+            }
+
+        .button {
+            display: inline-block;
+            padding: 12px 30px;
+            background: #007bff;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 20px;
+            transition: background 0.3s;
+        }
+
+            .button:hover {
+                background: #0056b3;
+            }
+
+        h2 {
+            text-align: center;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <div class="hero-section">
+        <div class="hero-content">
+            <h1><strong>𝓝 𝓐 𝓟 𝓞</strong></h1>
+            <p>Your Premier Destination for Literary Excellence</p>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <h2><strong>Our Story</strong></h2>
+        <p><strong>N A P O was founded with a simple yet powerful vision: to connect readers with their next favorite book. Since our establishment, we've been dedicated to creating an immersive book shopping experience that caters to all literary enthusiasts.</strong></p>
+
+        <div class="about-grid">
+            <div class="about-card">
+                <img src="https://www.gemass.fr/wp-content/uploads/2023/06/depositphotos_72812467-stock-illustration-stamp-mission-in-red.jpg" alt="Our Mission">
+                <h3>Our Mission</h3>
+                <p>To provide accessible, diverse, and quality literature to readers worldwide while fostering a community of book lovers.</p>
+            </div>
+
+            <div class="about-card">
+                <img src="/values.jpg" alt="Our Values">
+                <h3>Our Values</h3>
+                <p>Integrity, customer satisfaction, literary diversity, and community engagement are at the heart of everything we do.</p>
+            </div>
+
+            <div class="about-card">
+                <img src="https://miro.medium.com/v2/resize:fit:1400/1*3Lwx9iMhg1mkLsZViJswVg.jpeg" alt="Our Commitment">
+                <h3>Our Commitment</h3>
+                <p>We're committed to providing exceptional service, carefully curated collections, and competitive prices to our valued customers.</p>
+            </div>
+        </div>
+    </main>
+
+    <!-- Team Section -->
+    <section class="team-section">
+        <div class="team-container">
+            <h2>Meet Our Team</h2>
+            <p>Our passionate team of book enthusiasts is here to help you discover your next great read.</p>
+
+            <div class="team-grid">
+                <!-- Team Member 1 -->
+                <div class="team-member">
+                    <img src="~/WhatsApp Image 2025-01-24 at 01.06.02.jpeg" alt="Ayman Chakib">
+                    <div class="team-info">
+                        <h3>Ayman Chakib</h3>
+                        <div class="position">Founder & CEO</div>
+                        <p>With 15 years in the publishing industry, Ayman leads our vision for connecting readers with exceptional literature.</p>
+                        <div class="social-links">
+                            <a href="https://ma.linkedin.com/in/ayman-chakib-437359208" class="linkedin" target="_blank">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                            <a href="https://x.com/aymanch75799323" class="twitter" target="_blank">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="https://www.instagram.com/ayman_chakib/" class="instagram" target="_blank">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Team Member 2 -->
+                <div class="team-member">
+                    <img src="~/WhatsApp Image 2025-01-25 at 00.55.01.jpeg" alt="Wafae Majdoub">
+                    <div class="team-info">
+                        <h3>Wafae Majdoub</h3>
+                        <div class="position">Head of Curation</div>
+                        <p>Wafae's expertise in literature helps us maintain a diverse and engaging collection of books.</p>
+                        <div class="social-links">
+                            <a href="#" class="linkedin" target="_blank">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                            <a href="#" class="twitter" target="_blank">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="https://www.instagram.com/wafae.majdoub/" class="instagram" target="_blank">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Team Member 3 -->
+                <div class="team-member">
+                    <img src="https://img-cdn.inc.com/image/upload/f_webp,q_auto,c_fit/images/panoramic/adele-mental-health-inc_542930_awrf7g.jpg" alt="Sarah Williams">
+                    <div class="team-info">
+                        <h3>Sarah Williams</h3>
+                        <div class="position">Marketing Director</div>
+                        <p>Sarah crafts our brand story and helps spread the love of reading to new audiences.</p>
+                        <div class="social-links">
+                            <a href="#" class="linkedin" target="_blank">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                            <a href="#" class="twitter" target="_blank">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="#" class="instagram" target="_blank">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

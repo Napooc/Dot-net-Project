@@ -1,0 +1,206 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Napo Bookshop</title>
+    <link rel="stylesheet" href="~/css/my.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation (same as main.html) -->
+
+    <div class="contact-hero">
+        <h1>Write to Us</h1>
+        <div class="floating-elements">
+            <i class="fas fa-envelope"></i>
+            <i class="fas fa-book"></i>
+            <i class="fas fa-feather"></i>
+        </div>
+    </div>
+
+    <div class="contact-container">
+        <div class="book-container">
+            <!-- Left Page -->
+            <div class="book-page left-page">
+                <h2>Send Us a Message</h2>
+                <form id="contactForm" class="contact-form">
+                    <div class="form-group">
+                        <label>Your Name</label>
+                        <input type="text" id="userName" required class="paper-input">
+                        <div class="ink-line"></div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Email</label>
+                        <input type="email" id="userEmail" required class="paper-input">
+                        <div class="ink-line"></div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Subject</label>
+                        <select id="userSubject" class="paper-input">
+                            <option>General Inquiry</option>
+                            <option>Book Order</option>
+                            <option>Event Information</option>
+                            <option>Feedback</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Your Message</label>
+                        <textarea id="userMessage" class="paper-input" rows="5" required></textarea>
+                        <div class="ink-line"></div>
+                    </div>
+
+                    <button type="submit" class="send-button">
+                        <i class="fas fa-paper-plane"></i> Send Message
+                    </button>
+                </form>
+            </div>
+
+            <!-- Right Page -->
+            <div class="book-page right-page">
+                <h2>Visit Our Bookshop</h2>
+                <div class="location-info">
+                    <div class="info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h3>Address</h3>
+                            <p>105 Rue Al Bakri ,</p>
+                            <p> Casablanca 20250</p>
+                        </div>
+                    </div>
+
+                    <div class="info-item">
+                        <i class="fas fa-clock"></i>
+                        <div>
+                            <h3>Opening Hours</h3>
+                            <p>Monday - Friday: 9:00 AM - 8:00 PM</p>
+                            <p>Weekend: 10:00 AM - 6:00 PM</p>
+                        </div>
+                    </div>
+
+                    <div class="info-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h3>Contact</h3>
+                            <p>Phone: (+212) 630-475003</p>
+                            <p>Email: Team@napobookshop.com</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="map-container">
+                    <div id="map"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="faq-section">
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq-grid">
+            <div class="faq-card">
+                <div class="faq-question">
+                    <h3>Do you offer international shipping?</h3>
+                    <i class="fas fa-plus"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>Yes, we ship worldwide! Shipping costs and delivery times vary by location.</p>
+                </div>
+            </div>
+            <!-- Add more FAQ items -->
+        </div>
+    </div>
+
+    <!-- Add this confirmation modal -->
+    <div id="confirmationModal" class="modal">
+        <div class="modal-content">
+            <div class="success-animation">
+                <i class="fas fa-check-circle"></i>
+            </div>
+            <h2>Thank You!</h2>
+            <p>Your message has been sent successfully.</p>
+            <p>We'll get in touch with you soon!</p>
+            <button id="closeModal" class="close-button">Close</button>
+        </div>
+    </div>
+
+    <script>
+        // Form animation
+        document.querySelectorAll('.paper-input').forEach(input => {
+            input.addEventListener('focus', () => {
+                input.parentElement.classList.add('active');
+            });
+
+            input.addEventListener('blur', () => {
+                if (!input.value) {
+                    input.parentElement.classList.remove('active');
+                }
+            });
+        });
+
+        // FAQ toggles
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', () => {
+                const answer = question.nextElementSibling;
+                const icon = question.querySelector('i');
+
+                answer.style.maxHeight = answer.style.maxHeight ? null : answer.scrollHeight + 'px';
+                icon.classList.toggle('fa-plus');
+                icon.classList.toggle('fa-minus');
+            });
+        });
+
+        // Form submission
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            // Get form values
+            const formData = {
+                name: document.getElementById('userName').value,
+                email: document.getElementById('userEmail').value,
+                subject: document.getElementById('userSubject').value,
+                message: document.getElementById('userMessage').value
+            };
+
+            // Show success animation on button
+            const button = e.target.querySelector('button');
+            button.innerHTML = '<i class="fas fa-check"></i> Sent!';
+            button.classList.add('success');
+
+            // Show confirmation modal
+            const modal = document.getElementById('confirmationModal');
+            modal.classList.add('show');
+
+            // Reset form
+            this.reset();
+
+            // Reset button after delay
+            setTimeout(() => {
+                button.innerHTML = '<i class="fas fa-paper-plane"></i> Send Message';
+                button.classList.remove('success');
+            }, 3000);
+        });
+
+        // Close modal when clicking close button
+        document.getElementById('closeModal').addEventListener('click', function() {
+            document.getElementById('confirmationModal').classList.remove('show');
+        });
+
+        // Close modal when clicking outside
+        window.addEventListener('click', function(e) {
+            const modal = document.getElementById('confirmationModal');
+            if (e.target === modal) {
+                modal.classList.remove('show');
+            }
+        });
+    </script>
+
+    <!-- Add Google Maps API -->
+    <script async defer
+            src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap">
+    </script>
+</body>
+</html> 

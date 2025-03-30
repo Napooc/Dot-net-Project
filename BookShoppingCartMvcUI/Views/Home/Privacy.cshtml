@@ -1,0 +1,398 @@
+﻿@{
+    ViewData["Title"] = "Privacy Policy";
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - Napo Bookshop</title>
+    <link rel="stylesheet" href="~/css/Privacy.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation (same as main.html) -->
+    <nav>
+        <!-- Your navigation code here -->
+    </nav>
+
+    <div class="privacy-hero">
+        <h1>Privacy Policy</h1>
+        <div class="floating-icons">
+            <i class="fas fa-shield-alt"></i>
+            <i class="fas fa-lock"></i>
+            <i class="fas fa-user-shield"></i>
+        </div>
+    </div>
+
+    <div class="book-container">
+        <div class="page-flip-sound">
+            <audio id="pageFlipSound" src="page-flip.mp3"></audio>
+        </div>
+
+        <div class="table-of-contents">
+            <h2>Contents</h2>
+            <ul class="contents-list">
+                <li><a href="#information-collection">Information Collection</a></li>
+                <li><a href="#information-usage">Information Usage</a></li>
+                <li><a href="#data-security">Data Security</a></li>
+                <li><a href="#cookies">Cookies Policy</a></li>
+                <li><a href="#rights">Your Rights</a></li>
+            </ul>
+        </div>
+
+        <div class="book-pages">
+            <section id="information-collection" class="policy-section">
+                <div class="bookmark" data-color="#e63946">
+                    <span>01</span>
+                </div>
+                <h2>Information Collection</h2>
+                <div class="collection-intro">
+                    <p>At Napo Bookshop, we collect various types of information to provide you with the best book-shopping experience. Here's what we collect and why:</p>
+                </div>
+                <div class="info-collection-grid">
+                    <div class="info-card">
+                        <i class="fas fa-user"></i>
+                        <h3>Personal Information</h3>
+                        <div class="card-content">
+                            <ul>
+                                <li><span class="info-label">Full Name:</span> For order processing and personalized service</li>
+                                <li><span class="info-label">Email Address:</span> For order confirmations and updates</li>
+                                <li><span class="info-label">Phone Number:</span> For delivery coordination</li>
+                                <li><span class="info-label">Shipping Address:</span> For accurate delivery of your books</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="info-card">
+                        <i class="fas fa-credit-card"></i>
+                        <h3>Payment Information</h3>
+                        <div class="card-content">
+                            <ul>
+                                <li><span class="info-label">Payment Method:</span> Credit card, PayPal, or other payment options</li>
+                                <li><span class="info-label">Billing Address:</span> For payment verification</li>
+                                <li><span class="info-label">Transaction History:</span> For order tracking and support</li>
+                            </ul>
+                            <div class="security-note">
+                                <i class="fas fa-shield-alt"></i>
+                                <p>Your payment information is securely encrypted and never stored on our servers.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="info-card">
+                        <i class="fas fa-book-reader"></i>
+                        <h3>Reading Preferences</h3>
+                        <div class="card-content">
+                            <ul>
+                                <li><span class="info-label">Favorite Genres:</span> To recommend relevant books</li>
+                                <li><span class="info-label">Reading History:</span> To personalize your experience</li>
+                                <li><span class="info-label">Wishlist Items:</span> To notify you of availability and sales</li>
+                                <li><span class="info-label">Reviews & Ratings:</span> To help other readers</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="info-card">
+                        <i class="fas fa-globe"></i>
+                        <h3>Technical Data</h3>
+                        <div class="card-content">
+                            <ul>
+                                <li><span class="info-label">Device Info:</span> To optimize website performance</li>
+                                <li><span class="info-label">IP Address:</span> For security and location services</li>
+                                <li><span class="info-label">Browser Type:</span> For compatibility</li>
+                                <li><span class="info-label">Session Data:</span> To maintain your shopping session</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="data-retention">
+                    <h3><i class="fas fa-clock"></i> Data Retention Period</h3>
+                    <div class="retention-timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-icon">
+                                <i class="fas fa-shopping-bag"></i>
+                            </div>
+                            <div class="timeline-content">
+                                <h4>Order Information</h4>
+                                <p>Retained for 5 years after purchase</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-icon">
+                                <i class="fas fa-history"></i>
+                            </div>
+                            <div class="timeline-content">
+                                <h4>Browsing History</h4>
+                                <p>Stored for 12 months</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-icon">
+                                <i class="fas fa-user-circle"></i>
+                            </div>
+                            <div class="timeline-content">
+                                <h4>Account Information</h4>
+                                <p>Kept until account deletion</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="information-usage" class="policy-section">
+                <div class="bookmark" data-color="#457b9d">
+                    <span>02</span>
+                </div>
+                <h2>Information Usage</h2>
+                <div class="usage-cards">
+                    <div class="flip-card">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <i class="fas fa-shopping-cart"></i>
+                                <h3>Order Processing</h3>
+                            </div>
+                            <div class="flip-card-back">
+                                <p>We use your information to process orders, send confirmations, and provide shipping updates.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flip-card">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <i class="fas fa-envelope"></i>
+                                <h3>Communication</h3>
+                            </div>
+                            <div class="flip-card-back">
+                                <p>We'll send you order updates, newsletters (if subscribed), and important announcements about our services.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flip-card">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <i class="fas fa-book-reader"></i>
+                                <h3>Personalization</h3>
+                            </div>
+                            <div class="flip-card-back">
+                                <p>We analyze your reading preferences to recommend books and provide a personalized shopping experience.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flip-card">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <i class="fas fa-chart-bar"></i>
+                                <h3>Service Improvement</h3>
+                            </div>
+                            <div class="flip-card-back">
+                                <p>We analyze user behavior to improve our website, services, and book recommendations.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="data-security" class="policy-section">
+                <div class="bookmark" data-color="#2a9d8f">
+                    <span>03</span>
+                </div>
+                <h2>Data Security</h2>
+                <div class="security-animation">
+                    <div class="shield-container">
+                        <i class="fas fa-shield-alt"></i>
+                        <div class="security-rings"></div>
+                    </div>
+                </div>
+                <div class="security-cards">
+                    <div class="security-card">
+                        <i class="fas fa-lock"></i>
+                        <h3>Encryption</h3>
+                        <p>All sensitive data is encrypted using industry-standard SSL/TLS protocols.</p>
+                    </div>
+                    <div class="security-card">
+                        <i class="fas fa-server"></i>
+                        <h3>Secure Storage</h3>
+                        <p>Your data is stored in secure servers with regular security updates and monitoring.</p>
+                    </div>
+                    <div class="security-card">
+                        <i class="fas fa-user-lock"></i>
+                        <h3>Access Control</h3>
+                        <p>Only authorized personnel have access to customer data, with strict access controls.</p>
+                    </div>
+                    <div class="security-card">
+                        <i class="fas fa-shield-virus"></i>
+                        <h3>Regular Audits</h3>
+                        <p>We conduct regular security audits and vulnerability assessments.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="cookies" class="policy-section">
+                <div class="bookmark" data-color="#e9c46a">
+                    <span>04</span>
+                </div>
+                <h2>Cookies Policy</h2>
+                <div class="cookie-info">
+                    <p class="cookie-intro">We use cookies to enhance your browsing experience. Click each cookie type to learn more:</p>
+                </div>
+                <div class="cookie-jar">
+                    <div class="cookie" data-type="essential">
+                        <div class="cookie-front">Essential</div>
+                        <div class="cookie-details">
+                            <h4>Essential Cookies</h4>
+                            <ul>
+                                <li>Authentication</li>
+                                <li>Shopping Cart</li>
+                                <li>Security Features</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="cookie" data-type="functional">
+                        <div class="cookie-front">Functional</div>
+                        <div class="cookie-details">
+                            <h4>Functional Cookies</h4>
+                            <ul>
+                                <li>Language Preferences</li>
+                                <li>Reading History</li>
+                                <li>Wishlist Items</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="cookie" data-type="analytics">
+                        <div class="cookie-front">Analytics</div>
+                        <div class="cookie-details">
+                            <h4>Analytics Cookies</h4>
+                            <ul>
+                                <li>Site Usage Data</li>
+                                <li>Performance Metrics</li>
+                                <li>User Behavior</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="cookie" data-type="marketing">
+                        <div class="cookie-front">Marketing</div>
+                        <div class="cookie-details">
+                            <h4>Marketing Cookies</h4>
+                            <ul>
+                                <li>Book Recommendations</li>
+                                <li>Personalized Ads</li>
+                                <li>Social Media Features</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="cookie-preferences">
+                    <h3>Cookie Preferences</h3>
+                    <p>You can manage your cookie preferences at any time:</p>
+                    <div class="cookie-toggles">
+                        <label class="toggle">
+                            <input type="checkbox" checked disabled>
+                            <span class="slider"></span>
+                            Essential Cookies
+                        </label>
+                        <label class="toggle">
+                            <input type="checkbox" checked>
+                            <span class="slider"></span>
+                            Functional Cookies
+                        </label>
+                        <label class="toggle">
+                            <input type="checkbox">
+                            <span class="slider"></span>
+                            Analytics Cookies
+                        </label>
+                        <label class="toggle">
+                            <input type="checkbox">
+                            <span class="slider"></span>
+                            Marketing Cookies
+                        </label>
+                    </div>
+                    <button class="save-preferences">Save Preferences</button>
+                </div>
+            </section>
+
+            <section id="rights" class="policy-section">
+                <div class="bookmark" data-color="#f4a261">
+                    <span>05</span>
+                </div>
+                <h2>Your Rights</h2>
+                <div class="rights-accordion">
+                    <div class="accordion-item">
+                        <div class="accordion-header">
+                            <i class="fas fa-eye"></i>
+                            Right to Access
+                        </div>
+                        <div class="accordion-content">
+                            <p>You have the right to request access to your personal data.</p>
+                        </div>
+                    </div>
+                    <!-- Add more accordion items -->
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <script>
+        // Smooth scrolling for table of contents
+        document.querySelectorAll('.contents-list a').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const section = document.querySelector(this.getAttribute('href'));
+                section.scrollIntoView({ behavior: 'smooth' });
+
+                // Play page flip sound
+                const audio = document.getElementById('pageFlipSound');
+                audio.currentTime = 0;
+                audio.play();
+            });
+        });
+
+        // Intersection Observer for sections
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.2 });
+
+        document.querySelectorAll('.policy-section').forEach(section => {
+            observer.observe(section);
+        });
+
+        // Flip cards interaction
+        document.querySelectorAll('.flip-card').forEach(card => {
+            card.addEventListener('click', () => {
+                card.classList.toggle('flipped');
+            });
+        });
+
+        // Cookie jar interaction
+        document.querySelectorAll('.cookie').forEach(cookie => {
+            cookie.addEventListener('click', () => {
+                cookie.classList.toggle('selected');
+            });
+        });
+
+        // Accordion functionality
+        document.querySelectorAll('.accordion-header').forEach(header => {
+            header.addEventListener('click', () => {
+                const content = header.nextElementSibling;
+                const item = header.parentElement;
+
+                item.classList.toggle('active');
+
+                if (item.classList.contains('active')) {
+                    content.style.maxHeight = content.scrollHeight + 'px';
+                } else {
+                    content.style.maxHeight = 0;
+                }
+            });
+        });
+    </script>
+</body>
+</html>
